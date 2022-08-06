@@ -1,12 +1,34 @@
 body::before{
     display: block;
     content: '';
-    height: 60px;
+    height: 55px;
 }
-
 
 @media(min-width: 768px){
     .news-input-section{
         width: 50%;
     }
+}
+.portfolio-overlay{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 36, 90, 0.9);
+    display:flex;
+    align-items: end;
+    padding:30px;
+    opacity:0;
+}
+.portfolio-item:hover .portfolio-overlay{
+    opacity: 1;
+}
+.portfolio-item:hover img{
+    transform: scale(1.1)
+}
+
+.portfolio-item img,
+.portfolio-item .portfolio-overlay{
+    transition: all 0.4s ease;
 }
